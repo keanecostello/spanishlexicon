@@ -30,7 +30,7 @@ server <- function(input, output, session) {
   df <- df[,2:ncol(df)]
   
   coords <- read.csv('span_coords.csv')
-  cum_df <- read.csv('CumSumLangYear - Sheet1.csv')
+  cum_df <- read.csv('CumSumLangYear.csv')
   cum_df[is.na(cum_df)] <- 0
   map_df <- merge(cum_df, coords, by='lang')
 
